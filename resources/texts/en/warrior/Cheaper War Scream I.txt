@@ -1,0 +1,3 @@
+Reduce the Mana cost of §nWar Scream§r.
+
+§M Mana Cost: §f-5

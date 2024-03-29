@@ -1,0 +1,7 @@
+§nWar Scream§r will fire a projectile that can go through walls and deal damage multiple times.
+
+§S Total Damage: §f50% §8(of your DPS)§r
+§G§8(§U Damage: 40%)§r
+§G§8(§A Air: 10%)§r
+§O Area of Effect: §f2 Blocks §7(Circle-Shaped)§r
+§R Range: §f32 Blocks

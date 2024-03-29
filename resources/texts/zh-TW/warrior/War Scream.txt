@@ -1,0 +1,9 @@
+Emits a roar that deals damage, pulls nearby enemies and gives you and nearby players resistance.
+
+§M 魔力消耗：§f30§r
+§S 總體傷害：§f100%§8（你的 DPS）§r
+§G§8（§U 中立傷害：75%）§r
+§G§8（§F 火屬傷害：25%）§r
+§V 效果：賦予友方 §f20%§7 抗性§r
+§D 持續時間：§f30 秒§r
+§O 效果範圍：§f12 格§7（圓形）

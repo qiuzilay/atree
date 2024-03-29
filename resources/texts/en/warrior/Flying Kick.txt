@@ -1,0 +1,6 @@
+Hitting mobs with §nCharge§r will halt your momentum and knock them away.
+
+§S Total Damage: §f200% §8(of your DPS)§r
+§G§8(§U Damage: 150%)§r
+§G§8(§A Air: 30%)§r
+§G§8(§W Water: 20%)

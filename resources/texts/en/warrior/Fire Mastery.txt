@@ -1,0 +1,4 @@
+Increase your base damage from all Fire attacks.
+
+§F Fire Damage: §f+3-5§r
+§F Fire Damage: §f+15%

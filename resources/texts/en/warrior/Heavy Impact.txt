@@ -1,0 +1,5 @@
+After using §nCharge§r, violently crash down unto the ground and deal damage.
+
+§S Total Damage: §f120% §8(of your DPS)§r
+§G§8(§U Damage: 120%)§r
+§O Area of Effect: §f4 Blocks

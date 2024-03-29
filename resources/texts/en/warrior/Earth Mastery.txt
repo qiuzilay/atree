@@ -1,0 +1,4 @@
+Increase your base damage from all Earth attacks.
+
+§E Earth Damage: §f+2-4§r
+§E Earth Damage: §f+20%

@@ -1,0 +1,7 @@
+§nWar Scream§r will ripple the ground and deal damage to enemies §f3 §7times over a large area.
+
+§S Total Damage: §f50% §8(of your DPS, per ripple)§r
+§G§8(§U Damage: 30%)§r
+§G§8(§E Earth: 10%)§r
+§G§8(§A Air: 10%)§r
+§O Area of Effect: §f12 Blocks §7(Circle-Shaped)

@@ -1,0 +1,1 @@
+Reduces the cooldown of §nBak'al's Grasp§r by §f-5s§7, and increases the raw damage gained for every §f2% §7of health lost by §f+1§7.

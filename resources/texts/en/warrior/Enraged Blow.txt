@@ -1,0 +1,1 @@
+While §bCorrupted§7, every §f1% §7of Health you lose will increase your damage by §f+1.5%§7. §B(Max 80%)

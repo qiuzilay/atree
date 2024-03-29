@@ -1,0 +1,6 @@
+Deals damage around you for each mantle lost when §nMantle of the Bovemist§r loses all charges.
+
+§S Total Damage: §f100% §8(of your DPS, per mantle lost)§r
+§G§8(§U Damage: 70%)§r
+§G§8(§T Thunder: 30%)§r
+§O Area of Effect: §f5 Blocks §7(Circle-Shaped)

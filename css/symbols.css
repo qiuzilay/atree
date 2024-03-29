@@ -1,0 +1,343 @@
+span.color-black {
+    color: #000000;
+    text-shadow: 2px 2px #000000;
+}
+
+span.color-dark_blue {
+    color: #0000AA;
+    text-shadow: 2px 2px #00002A;
+}
+
+span.color-dark_green {
+    color: #00AA00;
+    text-shadow: 2px 2px #002A00;
+}
+
+span.color-dark_aqua {
+    color: #00AAAA;
+    text-shadow: 2px 2px #002A2A;
+}
+
+span.color-dark_red {
+    color: #AA0000;
+    text-shadow: 2px 2px #2A0000;
+}
+
+span.color-dark_purple {
+    color: #AA00AA;
+    text-shadow: 2px 2px #2A002A;
+}
+
+span.color-gold {
+    color: #FFAA00;
+    text-shadow: 2px 2px #2A2A00;
+}
+
+span.color-gray {
+    color: #AAAAAA;
+    text-shadow: 2px 2px #2A2A2A;
+}
+
+span.color-dark_gray {
+    color: #555555;
+    text-shadow: 2px 2px #151515;
+}
+
+span.color-blue {
+    color: #5555FF;
+    text-shadow: 2px 2px #15153F;
+}
+
+span.color-green {
+    color: #55FF55;
+    text-shadow: 2px 2px #153F15;
+}
+
+span.color-aqua {
+    color: #55FFFF;
+    text-shadow: 2px 2px #153F3F;
+}
+
+span.color-red {
+    color: #FF5555;
+    text-shadow: 2px 2px #3F1515;
+}
+
+span.color-pink {
+    color: #FF55FF;
+    text-shadow: 2px 2px #3F153F;
+}
+
+span.color-yellow {
+    color: #FFFF55;
+    text-shadow: 2px 2px #3F3F15;
+}
+
+span.color-white {
+    color: #FFFFFF;
+    text-shadow: 2px 2px #3F3F3F;
+}
+
+/* -------- bold -------- */
+
+span.color-black.style-bold {
+    color: #000000;
+    text-shadow: 3px 3px #000000;
+}
+
+span.color-dark_blue.style-bold {
+    color: #0000AA;
+    text-shadow: 3px 3px #00002A;
+}
+
+span.color-dark_green.style-bold {
+    color: #00AA00;
+    text-shadow: 3px 3px #002A00;
+}
+
+span.color-dark_aqua.style-bold {
+    color: #00AAAA;
+    text-shadow: 3px 3px #002A2A;
+}
+
+span.color-dark_red.style-bold {
+    color: #AA0000;
+    text-shadow: 3px 3px #2A0000;
+}
+
+span.color-dark_purple.style-bold {
+    color: #AA00AA;
+    text-shadow: 3px 3px #2A002A;
+}
+
+span.color-gold.style-bold {
+    color: #FFAA00;
+    text-shadow: 3px 3px #2A2A00;
+}
+
+span.color-gray.style-bold {
+    color: #AAAAAA;
+    text-shadow: 3px 3px #2A2A2A;
+}
+
+span.color-dark_gray.style-bold {
+    color: #555555;
+    text-shadow: 3px 3px #151515;
+}
+
+span.color-blue.style-bold {
+    color: #5555FF;
+    text-shadow: 3px 3px #15153F;
+}
+
+span.color-green.style-bold {
+    color: #55FF55;
+    text-shadow: 3px 3px #153F15;
+}
+
+span.color-aqua.style-bold {
+    color: #55FFFF;
+    text-shadow: 3px 3px #153F3F;
+}
+
+span.color-red.style-bold {
+    color: #FF5555;
+    text-shadow: 3px 3px #3F1515;
+}
+
+span.color-pink.style-bold {
+    color: #FF55FF;
+    text-shadow: 3px 3px #3F153F;
+}
+
+span.color-yellow.style-bold {
+    color: #FFFF55;
+    text-shadow: 3px 3px #3F3F15;
+}
+
+span.color-white.style-bold {
+    color: #FFFFFF;
+    text-shadow: 3px 3px #3F3F3F;
+}
+
+/* -------- styles -------- */
+
+span.style-bold {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+span.style-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    span.style-underline {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        vertical-align: top;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    span.style-underline {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        vertical-align: top;
+    }
+
+}
+
+span.style-smaller {
+    font-size: 0.75em;
+}
+
+span.style-larger {
+    font-size: 1.25em;
+}
+
+span.style-oblique {
+    font-style: oblique;
+}
+
+span.style-wrapper {
+    display: inline-block;
+}
+
+/* -------- symbols -------- */
+
+span[class^='symbol-']::before {
+    display: inline-block !important;
+    text-align: center;
+    width: 1.25em;
+    overflow: visible;
+}
+
+span.symbol-checkmark::before,
+span.symbol-deny::before {
+    width: unset;
+    padding-right: .5em;
+}
+
+span.symbol-neutral::before,
+span.symbol-earth::before,
+span.symbol-thunder::before,
+span.symbol-water::before,
+span.symbol-fire::before,
+span.symbol-air::before {
+    font-size: .8em;
+    transform: scale(1.1);
+}
+
+span.symbol-neutral::before {
+    content: '\2724';
+    color: #FFAA00;
+    text-shadow: 2px 2px #2A2A00;
+}
+
+span.symbol-earth::before {
+    content: '\2724';
+    color: #00AA00;
+    text-shadow: 2px 2px #002A00;
+}
+
+span.symbol-thunder::before {
+    content: '\2726';
+    color: #FFFF55;
+    text-shadow: 2px 2px #3F3F15;
+}
+
+span.symbol-water::before {
+    content: '\2749';
+    color: #55FFFF;
+    text-shadow: 2px 2px #153F3F;
+}
+
+span.symbol-fire::before {
+    content: '\2739';
+    color: #FF5555;
+    text-shadow: 2px 2px #3F1515;
+}
+
+span.symbol-air::before {
+    content: '\274B';
+    color: #FFFFFF;
+    text-shadow: 2px 2px #3F3F3F;
+}
+
+span.symbol-checkmark::before {
+    content: '\2714\FE0E';
+    color: #55FF55;
+    text-shadow: 2px 2px #153F15;
+}
+
+span.symbol-deny::before {
+    content: '\2718';
+    color: #FF5555;
+    text-shadow: 2px 2px #3F1515;
+}
+
+span.symbol-mana::before {
+    content: '\273A';
+    color: #55FFFF;
+    text-shadow: 2px 2px #153F3F;
+}
+
+span.symbol-aoe::before {
+    content: '\2600';
+    color: #00AA00;
+    text-shadow: 2px 2px #002A00;
+}
+
+span.symbol-range::before {
+    content: '\27BC';
+    color: #00AA00;
+    text-shadow: 2px 2px #002A00;
+}
+
+span.symbol-duration::before {
+    content: '\29D6';
+    color: #FF55FF;
+    text-shadow: 2px 2px #3F153F;
+    vertical-align: text-bottom;
+    transform: scale(1.6);
+}
+
+span.symbol-sword::before {
+    content: '\2694';
+    color: #AA0000;
+    text-shadow: 2px 2px #2A0000;
+}
+
+span.symbol-heart::before {
+    content: '\2764\FE0E';
+    color: #FF5555;
+    text-shadow: 2px 2px #3F1515;
+}
+
+span.symbol-shield::before {
+    content: '\1F5E1';
+    color: #AAAAAA;
+    text-shadow: 2px 2px #2A2A2A;
+}
+
+span.symbol-gap::before {
+    content: '\3000';
+}
+
+/* -------- miscs -------- */
+
+.tooltip span[data-value] {
+    color: #FFFFFF;
+    text-shadow: 2px 2px #3F3F3F;
+}
+
+.tooltip .symbol-deny[data-update='archetype'] > span[data-value] {
+    color: #FF5555;
+    text-shadow: 2px 2px #3F1515;
+}

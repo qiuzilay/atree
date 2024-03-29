@@ -1,0 +1,1 @@
+While §bCorrupted§7, every §f3% §7Health you lose will increase §nBash§r's area of effect radius by §f+1§7. §B(Max 10)

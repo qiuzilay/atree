@@ -1,0 +1,4 @@
+Improve your §nMain Attack§r's damage and range when using a spear.
+
+§S Main Attack Damage: §f+5%§r
+§R Range: §f+1 Block

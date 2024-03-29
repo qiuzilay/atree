@@ -1,0 +1,9 @@
+Hurls enemies upwards and deal massive damage.
+
+§M Mana Cost: §f40§r
+§S Total Damage: §f280% §8(of your DPS)§r
+§G§8(§U Damage: 200%)§r
+§G§8(§E Earth: 40%)§r
+§G§8(§T Thunder: 40%)§r
+§O Area of Effect: §f1-3 Blocks §7(Cone-Shaped)§r
+§R Range: §f5 Blocks

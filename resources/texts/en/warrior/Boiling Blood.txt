@@ -1,0 +1,7 @@
+§nBash§r will leave a puddle of boiling blood after its first explosion, slowing down and damaging enemies on it every §f0.4 §7seconds.
+
+§S Total Damage: §f30% §8(of your DPS)§r
+§G§8(§U Damage: 25%)§r
+§G§8(§F Fire: 5%)§r
+§V Effect: §f20% §7Slowness to Enemies§r
+§D Duration: §f3s

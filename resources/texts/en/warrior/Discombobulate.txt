@@ -1,0 +1,4 @@
+Damaging enemies will inflict them with §b+5 Discombobulated§7. §B(Max 100)§r
+
+You will deal §f+1 §7neutral and elemental damage to enemies for every §bDiscombobulated §7they have.§r
+§f-5 §7of the bonus decays every second.

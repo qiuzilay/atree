@@ -1,0 +1,1 @@
+Keeps you alive with §f30% §7of your health remaining after receiving a fatal blow. §B(10m Cooldown)

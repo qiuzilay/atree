@@ -1,0 +1,9 @@
+§nWar Scream§r and §nAir Shout§r will deal more damage.
+
+§S Total Damage: §f+60% §8(of your DPS, for §nWar Scream§r§8)§r
+§G§8(§U Damage: +30%)§r
+§G§8(§A Air: +30%)§r
+
+§S Total Damage: §f+30% §8(of your DPS, for §nAir Shout§r§8)§r
+§G§8(§U Damage: +15%)§r
+§G§8(§A Air: +15%)

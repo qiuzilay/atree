@@ -1,0 +1,7 @@
+Gain the ability to unleash a §bSacred Surge§7. Whenever any of your spells or abilities are triggered, increase your holy power by §f1%§7.
+
+§nBash§r and §nUppercut§r will spend §f25% §7of §bSacred Surge §7to smite hit enemies with holy energy, deal extra damage.
+
+§S Total Damage: §f120% §8(of your DPS)§r
+§G§8(§U Damage: 100%)§r
+§G§8(§T Thunder: 20%)

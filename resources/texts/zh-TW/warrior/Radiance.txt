@@ -1,0 +1,11 @@
+§nBash§r 將會強化你和友方身上所有源自物品的增益效果。§B（冷卻 15 秒）§r
+§4以下例外：§r
+§4- §8Tomes 的效果§r
+§4- §8XP Bonus§r
+§4- §8Loot Bonus§r
+§4- §8Loot Quality§r
+§4- §8Gather XP Bonus§r
+§4- §8Gather Speed Bonus§r
+
+§V 效果：賦予友方 §f+20% §7增益效果強化§r
+§D 持續時間：§f8 秒

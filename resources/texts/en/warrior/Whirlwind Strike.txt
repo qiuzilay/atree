@@ -1,0 +1,7 @@
+§nUppercut§r will create a strong gust of air, launching you upward with enemies. §8(Hold shift to stay grounded)§r
+
+§S Total Damage: §f+10% §8(of your DPS)§r
+§G§8(§U Damage: -20%)§r
+§G§8(§A Air: +30%)§r
+§O Area of Effect: §fCircle-Shaped§r
+§R Range: §f+1 Blocks

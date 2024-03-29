@@ -1,0 +1,6 @@
+Gain a §f30% §7chance to take no damage and instantly attack back when dodging an enemy attack with Agility.
+
+§S Total Damage: §f100% §8(of your DPS)§r
+§G§8(§U Damage: 60%)§r
+§G§8(§A Air: 20%)§r
+§G§8(§T Thunder: 20%)

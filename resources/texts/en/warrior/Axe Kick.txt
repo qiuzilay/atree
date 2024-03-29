@@ -1,0 +1,5 @@
+Increases the damage and mana cost of §nUppercut§r.
+
+§M Mana Cost: §c+15§r
+§S Total Damage: §f+150% §8(of your DPS)§r
+§G§8(§U Damage: +150%)

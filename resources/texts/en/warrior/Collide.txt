@@ -1,0 +1,6 @@
+Enemies thrown in to walls from §nFlying Kick§r will explode and receive addtional damage.
+
+§S Total Damage: §f200% §8(of your DPS)§r
+§G§8(§U Damage: 150%)§r
+§G§8(§F Fire: 50%)§r
+§O Area of Effect: §f4 Blocks

@@ -1,0 +1,1 @@
+If you do not have enough mana to cast a spell, spend health instead. §B(§f0.4% §7health per mana)

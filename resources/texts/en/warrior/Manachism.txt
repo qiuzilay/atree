@@ -1,0 +1,1 @@
+If you receive a hit that's less than §f5% §7of your max HP, gain §f10 §7Mana. §B(1s Cooldown)

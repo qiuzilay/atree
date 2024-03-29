@@ -1,0 +1,5 @@
+§nBash§r will buff positive IDs of yourself and allies. §B(15s Cooldown)§r
+§8(Tomes are excluded, as well as XP Bonus, Loot Bonus, Loot Quality, Gather XP Bonus, and Gather Speed Bonus)§r
+
+§V Effect: §f+20% §7ID Effectiveness to Allies
+§D Duration: §f8s

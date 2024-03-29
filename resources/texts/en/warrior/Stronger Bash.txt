@@ -1,0 +1,4 @@
+Increase the damage of §nBash§r.
+
+§S Total Damage: §f+30% §8(of your DPS)§r
+§G§8(§U Damage: +30%)

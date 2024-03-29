@@ -1,0 +1,3 @@
+For every §f1% §7or §f1 Raw §7Main Attack Damage you have from items, gain §f+2% §7Walk Speed. §B(Max 20%)§r
+
+§S Damage Bonus: §f+5 §7(Raw)

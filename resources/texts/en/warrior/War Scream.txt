@@ -1,0 +1,9 @@
+Emits a roar that deals damage, pulls nearby enemies and gives you and nearby players resistance.
+
+§M Mana Cost: §f30§r
+§S Total Damage: §f100% §8(of your DPS)§r
+§G§8(§U Damage: 75%)§r
+§G§8(§F Fire: 25%)§r
+§V Effect: §f20%§7 Resistance Bonus to Allies§r
+§D Duration: §f30s§r
+§O Area of Effect: §f12 Blocks §7(Circle-Shaped)

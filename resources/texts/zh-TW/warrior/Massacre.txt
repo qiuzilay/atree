@@ -1,0 +1,1 @@
+在 §bCorrupted §7狀態下，如果你的攻擊速度§B（受 bonus 影響後的數值）§r為 Slow 或更慢的速度。使用普通攻擊傷害敵人將 §f+4% §bCorruption §7至你的 §bCorrupted Bar§7。§B（冷卻 2 秒）

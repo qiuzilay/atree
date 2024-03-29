@@ -1,0 +1,4 @@
+Increase your base damage from all Air attacks.
+
+§A Air Damage: §f+3-4§r
+§A Air Damage: §f+15%

@@ -1,0 +1,1 @@
+While §bCorrupted§7, if your attack speed §B(affected by IDs)§r is Slow or lower. hitting an enemy with your Main Attack will add §f+4% §bCorrupted §7to your §bCorrupted §7bar. §B(2s Cooldown)

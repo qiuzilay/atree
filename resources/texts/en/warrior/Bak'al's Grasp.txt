@@ -1,0 +1,4 @@
+Casting §nWar Scream§r will make you §bCorrupted§7. §B(15s Cooldown)§r
+§8(Shift + §nWar Scream§r §8to cancel)§r
+
+While §bCorrupted§7, you lose the ability to §fheal§7, and every §f2% §7health you lose will grant you §f+4 §7Raw Damage. §B(Max 120)

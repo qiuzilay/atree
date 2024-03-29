@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <title>Ability Tree</title>
+        <link href="../css/main.css" rel="stylesheet">
+        <link href="../css/images.css" rel="stylesheet">
+        <link href="../css/symbols.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="author" content="Marginalcat0410">
+        <meta name="title" property="og:title" content="Wynncraft Ability Tree">
+        <meta name="description" property="og:description" content="Wynncraft 中文翻譯的技能樹小工具 / Wynncraft Ability Tree gadget with Traditional Chinese translation">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="tab">
+            <span id="tab_span">
+                <button class="tab_button" onclick="turnPage(event, 'archer')" data-class="archer">弓箭手</button>
+                <button class="tab_button" onclick="turnPage(event, 'warrior')" data-class="warrior">戰士</button>
+                <button class="tab_button" onclick="turnPage(event, 'mage')" data-class="mage">法師</button>
+                <button class="tab_button" onclick="turnPage(event, 'assassin')" data-class="assassin">刺客</button>
+                <button class="tab_button" onclick="turnPage(event, 'shaman')" data-class="shaman">薩滿</button>
+            </span>
+        </div>
+        <div id="main">
+            <div id="archer" class="page">
+                <div class="frame head"><img alt="ability tree background UI"></div>
+                <div class="frame body">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+                <div class="frame foot">
+                    <img alt="ability tree background UI">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+            <div id="warrior" class="page">
+                <div class="frame head"><img alt="ability tree background UI"></div>
+                <div class="frame body">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+                <div class="frame foot">
+                    <img alt="ability tree background UI">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+            <div id="mage" class="page">
+                <div class="frame head"><img alt="ability tree background UI"></div>
+                <div class="frame body">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+                <div class="frame foot">
+                    <img alt="ability tree background UI">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+            <div id="assassin" class="page">
+                <div class="frame head"><img alt="ability tree background UI"></div>
+                <div class="frame body">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+                <div class="frame foot">
+                    <img alt="ability tree background UI">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+            <div id="shaman" class="page">
+                <div class="frame head"><img alt="ability tree background UI"></div>
+                <div class="frame body">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+                <div class="frame foot">
+                    <img alt="ability tree background UI">
+                    <div class="container">
+                        <table></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lang">
+            <select name="languages" id="lang-config">
+                <option value=0 selected>繁體中文</option>
+                <option value=1>English</option>
+            </select>
+        </div>
+        <script src="../javascript/main.js"></script>
+        <script>
+            'use strict';
+            var page;
+            const buttons = document.getElementById('tab').getElementsByClassName('tab_button');
+            const pages = document.getElementById('main').getElementsByClassName('page');
+            function turnPage(event, clsname) {
+                page = clsname;
+
+                Array.prototype.forEach.call(buttons, (elem) => {elem.classList.remove('active')});
+                Array.prototype.forEach.call(pages, (elem) => {elem.classList.remove('active')});
+                
+                setTimeout(() => {
+                    Array.prototype.forEach.call(pages, (elem) => {
+                        if (elem.id === clsname) {
+                            elem.style.display = 'block';
+                            setTimeout(() => {elem.classList.add('active')}, 500);
+                        } else {
+                            elem.style.display = 'none';
+                        }
+                    })
+                }, 500);
+
+                event.target.classList.add('active');
+                
+            }
+        </script>
+        <script>
+            'use strict';
+            var image = {
+                "button_archer_enable": new Image(),
+                "button_archer_disable": new Image(),
+                "button_archer_standby": new Image(),
+                "button_warrior_enable": new Image(),
+                "button_warrior_disable": new Image(),
+                "button_warrior_standby": new Image(),
+                "button_mage_enable": new Image(),
+                "button_mage_disable": new Image(),
+                "button_mage_standby": new Image(),
+                "button_assassin_enable": new Image(),
+                "button_assassin_disable": new Image(),
+                "button_assassin_standby": new Image(),
+                "button_shaman_enable": new Image(),
+                "button_shaman_disable": new Image(),
+                "button_shaman_standby": new Image(),
+                "button_1_enable": new Image(),
+                "button_1_disable": new Image(),
+                "button_1_standby": new Image(),
+                "button_1_lock": new Image(),
+                "button_1_disable": new Image(),
+                "button_2_enable": new Image(),
+                "button_2_disable": new Image(),
+                "button_2_standby": new Image(),
+                "button_2_lock": new Image(),
+                "button_2_disable": new Image(),
+                "button_3_enable": new Image(),
+                "button_3_disable": new Image(),
+                "button_3_standby": new Image(),
+                "button_3_lock": new Image(),
+                "button_3_disable": new Image(),
+                "button_4_enable": new Image(),
+                "button_4_disable": new Image(),
+                "button_4_standby": new Image(),
+                "button_4_lock": new Image(),
+                "button_4_disable": new Image(),
+                "br_NS": new Image(),
+                "br_NS_NS": new Image(),
+                "br_EW": new Image(),
+                "br_EW_EW": new Image(),
+                "br_SE": new Image(),
+                "br_SE_SE": new Image(),
+                "br_SW": new Image(),
+                "br_SW_SW": new Image(),
+                "br_NSE": new Image(),
+                "br_NSE_NS": new Image(),
+                "br_NSE_NE": new Image(),
+                "br_NSE_SE": new Image(),
+                "br_NSE_NSE": new Image(),
+                "br_NSW": new Image(),
+                "br_NSW_NS": new Image(),
+                "br_NSW_NW": new Image(),
+                "br_NSW_SW": new Image(),
+                "br_NSW_NSW": new Image(),
+                "br_SEW": new Image(),
+                "br_SEW_SE": new Image(),
+                "br_SEW_SW": new Image(),
+                "br_SEW_EW": new Image(),
+                "br_SEW_SEW": new Image(),
+                "br_NSEW": new Image(),
+                "br_NSEW_NS": new Image(),
+                "br_NSEW_NE": new Image(),
+                "br_NSEW_NW": new Image(),
+                "br_NSEW_SE": new Image(),
+                "br_NSEW_SW": new Image(),
+                "br_NSEW_EW": new Image(),
+                "br_NSEW_NSE": new Image(),
+                "br_NSEW_NSW": new Image(),
+                "br_NSEW_NEW": new Image(),
+                "br_NSEW_SEW": new Image(),
+                "br_NSEW_NSEW": new Image()
+            };
+            image['button_archer_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_enable.png";
+            image['button_archer_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_disable.png";
+            image['button_archer_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_standby.png";
+            image['button_warrior_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_enable.png";
+            image['button_warrior_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_disable.png";
+            image['button_warrior_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_standby.png";
+            image['button_mage_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_enable.png";
+            image['button_mage_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_disable.png";
+            image['button_mage_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_standby.png";
+            image['button_assassin_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_enable.png";
+            image['button_assassin_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_disable.png";
+            image['button_assassin_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_standby.png";
+            image['button_shaman_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_enable.png";
+            image['button_shaman_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_disable.png";
+            image['button_shaman_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_standby.png";
+            image['button_1_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_enable.png";
+            image['button_1_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_disable.png";
+            image['button_1_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_standby.png";
+            image['button_1_lock'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_lock.png";
+            image['button_1_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_disable.png";
+            image['button_2_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_enable.png";
+            image['button_2_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_disable.png";
+            image['button_2_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_standby.png";
+            image['button_2_lock'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_lock.png";
+            image['button_2_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_disable.png";
+            image['button_3_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_enable.png";
+            image['button_3_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_disable.png";
+            image['button_3_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_standby.png";
+            image['button_3_lock'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_lock.png";
+            image['button_3_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_disable.png";
+            image['button_4_enable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_enable.png";
+            image['button_4_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_disable.png";
+            image['button_4_standby'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_standby.png";
+            image['button_4_lock'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_lock.png";
+            image['button_4_disable'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_disable.png";
+            image['br_NS'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NS.png";
+            image['br_NS_NS'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NS_NS.png";
+            image['br_EW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_EW.png";
+            image['br_EW_EW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_EW_EW.png";
+            image['br_SE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SE.png";
+            image['br_SE_SE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SE_SE.png";
+            image['br_SW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SW.png";
+            image['br_SW_SW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SW_SW.png";
+            image['br_NSE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE.png";
+            image['br_NSE_NS'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NS.png";
+            image['br_NSE_NE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NE.png";
+            image['br_NSE_SE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_SE.png";
+            image['br_NSE_NSE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NSE.png";
+            image['br_NSW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW.png";
+            image['br_NSW_NS'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NS.png";
+            image['br_NSW_NW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NW.png";
+            image['br_NSW_SW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_SW.png";
+            image['br_NSW_NSW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NSW.png";
+            image['br_SEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW.png";
+            image['br_SEW_SE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SE.png";
+            image['br_SEW_SW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SW.png";
+            image['br_SEW_EW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_EW.png";
+            image['br_SEW_SEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SEW.png";
+            image['br_NSEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW.png";
+            image['br_NSEW_NS'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NS.png";
+            image['br_NSEW_NE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NE.png";
+            image['br_NSEW_NW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NW.png";
+            image['br_NSEW_SE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SE.png";
+            image['br_NSEW_SW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SW.png";
+            image['br_NSEW_EW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_EW.png";
+            image['br_NSEW_NSE'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSE.png";
+            image['br_NSEW_NSW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSW.png";
+            image['br_NSEW_NEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NEW.png";
+            image['br_NSEW_SEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SEW.png";
+            image['br_NSEW_NSEW'].src = "https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSEW.png"
+        </script>
+    </body>
+</html>

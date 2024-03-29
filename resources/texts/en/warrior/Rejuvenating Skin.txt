@@ -1,0 +1,1 @@
+For any damage you take, regenerate §f30% §7of the damage over the next §f30s§7.

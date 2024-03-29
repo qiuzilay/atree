@@ -1,0 +1,4 @@
+Increase your base damage from all Thunder attacks.
+
+§T Thunder Damage: §f+1-8§r
+§T Thunder Damage: §f+10%

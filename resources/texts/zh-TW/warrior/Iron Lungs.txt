@@ -1,0 +1,9 @@
+強化 §nWar Scream§r 和 §nAir Shout§r 的傷害。
+
+§S 總體傷害：§f+60%§8（你的 DPS／§nWar Scream§r §8的傷害）§r
+§G§8（§U 中立傷害：+30%）§r
+§G§8（§A 風屬傷害：+30%）§r
+
+§S 總體傷害：§f+30%§8（你的 DPS／§nAir Shout§r §8的傷害）§r
+§G§8（§U 中立傷害：+15%）§r
+§G§8（§A 風屬傷害：+15%）

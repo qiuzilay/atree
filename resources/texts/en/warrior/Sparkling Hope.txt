@@ -1,0 +1,6 @@
+Deals damage to all nearby enemies every time you heal §f5% §7of your max health.
+
+§S Total Damage: §f60% §8(of your DPS)§r
+§G§8(§U Damage: 40%)§r
+§G§8(§T Thunder: 20%)§r
+§O Area of Effect: §f6 Blocks §7(Circle-Shaped)

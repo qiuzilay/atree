@@ -1,0 +1,6 @@
+Damages enemies in your way when using §nCharge§r.
+
+§S Total Damage: §f120% §8(of your DPS)§r
+§G§8(§U Damage: 100%)§r
+§G§8(§A Air: 20%)§r
+§O Area of Effect: §f2 Blocks

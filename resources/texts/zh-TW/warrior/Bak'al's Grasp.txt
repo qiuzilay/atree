@@ -1,0 +1,4 @@
+施放 §nWar Scream§r 將使你陷入 §bCorrupted §7狀態。§B（冷卻 15 秒）§r
+§8（Shift + §nWar Scream§r §8可脫離狀態）§r
+
+處於 §bCorrupted §7狀態將無法以任何手段回復自身的生命值，且每當你損失最大生命值 §f2% §7的血量，就能獲得 §f+4 §7基礎傷害。§B（上限 120）

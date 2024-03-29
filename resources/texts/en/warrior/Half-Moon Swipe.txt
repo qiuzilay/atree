@@ -1,0 +1,7 @@
+§nUppercut§r will deal a footsweep attack at a longer and wider angle.
+
+§M Mana Cost: §f-5§r
+§S Total Damage: §c-40% §8(of your DPS)§r
+§G§8(§U Damage: -70%)§r
+§G§8(§W Water: +30%)§r
+§R Range: §f+1.5 Blocks

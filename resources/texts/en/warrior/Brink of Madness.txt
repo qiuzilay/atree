@@ -1,0 +1,1 @@
+You gain §f+40% §7Resistance buff if your health is at §f25% §7or less.

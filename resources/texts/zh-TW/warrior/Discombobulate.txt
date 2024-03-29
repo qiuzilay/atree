@@ -1,0 +1,4 @@
+給予敵人傷害時將同時賦予對方 §b+5 Discombobulated§7。§B（上限 100）§r
+
+對敵人造成傷害時，目標每擁有一個 §bDiscombobulated§7，你的元素傷害 §8(Elemental Damage) §7和中立傷害 §8(Neutral Damage) §7就各 §f+1§7。
+此增益效果以每秒 §f-5 §7的速度衰退。

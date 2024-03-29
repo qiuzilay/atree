@@ -1,0 +1,327 @@
+body {
+    overflow-x: hidden;
+    -webkit-touch-callout: none !important;
+}
+
+@font-face {
+    font-family: 'wynn';
+    src: url(https://cdn.jsdelivr.net/gh/qiuzilay/Website-Code@main/atree%20v3/resources/fonts/wynn_delta_regular.ttf) format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'wynn';
+    src: url(https://cdn.jsdelivr.net/gh/qiuzilay/Website-Code@main/atree%20v3/resources/fonts/wynn_alter_bold.ttf) format('truetype');
+    font-weight: 900;
+}
+
+
+/* -------- tab -------- */
+
+div#tab {
+    overflow: hidden;
+    border: none;
+    border-radius: 1.5em;
+    background-color: #323232;
+    text-align: center;
+}
+
+div#tab #tab_span {
+    display: flex;
+    width: 100%;
+    background-color: #323232;
+    justify-content: center;
+}
+
+div#tab #tab_span button {
+    display: inline-block;
+    padding: 14px 16px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: #FFFFFF;
+    font-family: 'wynn', 'nunito', 'Microsoft JhengHei', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    text-align: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div#tab #tab_span button:hover {
+    background-color: dimgray;
+}
+
+div#tab #tab_span button.active {
+    background-color: gray;
+}
+
+
+/* ------- main ------- */
+
+div#main {
+    padding-top: 1em;
+    font-family: Roboto;
+    font-size: large;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    image-rendering: pixelated;
+}
+
+div#main .page {
+    display: none;
+    border: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+div#main .page.active {
+    opacity: 1;
+}
+
+
+/* ------- main.page.frame ------- */
+
+div#main .frame {
+    margin: 0;
+    position: relative;
+    background-size: 100% 100%;
+    background-attachment: local;
+    background-repeat: initial;
+    image-rendering: inherit;
+}
+
+div#main .frame.head {
+    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-upper.png);
+}
+
+div#main .frame.body {
+    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-body.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+
+div#main .frame.foot {
+    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-lower.png);
+}
+
+
+/* ------- main.page.frame.img ------- */
+
+div#main .frame > img {
+    min-width: 100%;
+    visibility: hidden;
+    image-rendering: inherit;
+}
+
+div#main .frame.head > img {
+    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-upper.png);
+}
+
+div#main .frame.body > img {
+    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-body.png);
+}
+
+div#main .frame.foot > img {
+    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-lower.png);
+}
+
+/* ------- main.page.frame.container ------- */
+
+div#main .foot .container {
+    position: absolute;
+    top: 12.5%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+div#main .container table,
+div#main .container tbody,
+div#main .container tr,
+div#main .container td {
+    position: relative;
+    padding: 0;
+    border: none;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+div#main .container table {
+    display: table;
+    position: relative;
+    width: 87.5%;
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+div#main .container tr {
+    display: table-row;
+}
+
+div#main .container td {
+    display: table-cell;
+}
+
+div#main .frame.body .container td:has(button):hover::before,
+div#main .frame.foot .container td:has(img):hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    z-index: 99;
+}
+
+div#main .container td::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+div#main .container button {
+    display: block;
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 98;
+    left: 0;
+    top: 0;
+}
+
+div#main .container button > img {
+    image-rendering: inherit;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------- tooltip ------- */
+
+div#main td .tooltip {
+    display: block;
+    position: absolute;
+    width: max-content;
+    max-width: 48vw;
+    min-width: 32vw;
+    padding: .6em 4em .6em .8em;
+    left: 120%;
+    right: initial;
+    transform: translate(0%, -20%);
+    outline: 3px solid #120312;
+    border: 3px solid #1f0249;
+    background-color: #120312;
+    border-radius: 3px;
+    text-align: left;
+    color: #AAAAAA;
+    font-family: 'wynn', 'nunito', 'Microsoft JhengHei', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    text-shadow: 2px 2px #2A2A2A;
+    line-height: 1.5em;
+    word-spacing: -.15em;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    white-space: pre-line;
+    z-index: -1;
+    overflow: visible;
+    visibility: hidden;
+}
+
+div#main td .tooltip.reverse {
+    right: 120%;
+    left: initial;
+}
+
+div#main td:hover .tooltip {
+    z-index: 100;
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+    div#main td .tooltip {
+        max-width: 45vw;
+        min-width: 30vw;
+        font-size: medium;
+        padding: .53em 3.55em .53em .71em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#main td .tooltip {
+        max-width: 30vw;
+        min-width: 20vw;
+        font-size: small;
+        padding: .48em 3.25em .48em .65em;
+    }
+}
+
+/* ------- languages-config ------- */
+
+div#lang {
+    position: fixed;
+    background-color: #323232;
+    opacity: .8;
+    top: 8.5%;
+    left: 100%;
+    padding: .5em .5em .5em .25em;
+    font-size: large;
+    z-index: 101;
+    transition: all .5s .5s;
+}
+
+div#lang:hover {
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
+div#lang::before {
+    content: "〈";
+    color: #FFFFFF;
+    font-size: 1.25em;
+    font-weight: bold;
+    font-family: 'wynn', 'nunito', 'Microsoft JhengHei', sans-serif;
+    background-color: #323232;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 100%;
+    width: 15%;
+    height: 100%;
+    padding-right: .25em;
+    transform: translateX(1px);
+}
+
+div#lang > select#lang-config {
+    background: transparent;
+    color: white;
+    font-size: large;
+    padding: .5em 2em;
+    border: 1.5px solid;
+}
+
+select#lang-config > option {
+    background-color: #444444;
+    padding: .5em 2em;
+}
+
+select:-internal-list-box {
+    text-align: center;
+}

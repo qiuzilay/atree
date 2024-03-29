@@ -1,0 +1,5 @@
+§nBash§r will cast §f4 §7times consecutively at double the speed.
+
+§S Total Damage: §c-20% §8(of your DPS, per bash)§r
+§G§8(§U Damage: -20%)§r
+§R Range: §f+6 Blocks
