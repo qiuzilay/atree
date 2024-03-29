@@ -30,159 +30,159 @@ button.lock > img {
 /* -------- archer -------- */
 
 button.enable > img.button_archer {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_enable.png);
+    content: url(../resources/images/buttons/button_archer_enable.png);
 }
 
 button.disable > img.button_archer {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_disable.png);
+    content: url(../resources/images/buttons/button_archer_disable.png);
 }
 
 button.standby > img.button_archer {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_archer_standby.png);
+    content: url(../resources/images/buttons/button_archer_standby.png);
 }
 
 /* -------- warrior -------- */
 
 button.enable > img.button_warrior {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_enable.png);
+    content: url(../resources/images/buttons/button_warrior_enable.png);
 }
 
 button.disable > img.button_warrior {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_disable.png);
+    content: url(../resources/images/buttons/button_warrior_disable.png);
 }
 
 button.standby > img.button_warrior {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_warrior_standby.png);
+    content: url(../resources/images/buttons/button_warrior_standby.png);
 }
 
 /* -------- mage -------- */
 
 button.enable > img.button_mage {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_enable.png);
+    content: url(../resources/images/buttons/button_mage_enable.png);
 }
 
 button.disable > img.button_mage {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_disable.png);
+    content: url(../resources/images/buttons/button_mage_disable.png);
 }
 
 button.standby > img.button_mage {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_mage_standby.png);
+    content: url(../resources/images/buttons/button_mage_standby.png);
 }
 
 /* -------- assassin -------- */
 
 button.enable > img.button_assassin {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_enable.png);
+    content: url(../resources/images/buttons/button_assassin_enable.png);
 }
 
 button.disable > img.button_assassin {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_disable.png);
+    content: url(../resources/images/buttons/button_assassin_disable.png);
 }
 
 button.standby > img.button_assassin {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_assassin_standby.png);
+    content: url(../resources/images/buttons/button_assassin_standby.png);
 }
 
 /* -------- shaman -------- */
 
 button.enable > img.button_shaman {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_enable.png);
+    content: url(../resources/images/buttons/button_shaman_enable.png);
 }
 
 button.disable > img.button_shaman {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_disable.png);
+    content: url(../resources/images/buttons/button_shaman_disable.png);
 }
 
 button.standby > img.button_shaman {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_shaman_standby.png);
+    content: url(../resources/images/buttons/button_shaman_standby.png);
 }
 
 /* -------- button_1 -------- */
 
 button.enable > img.button_1 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_enable.png);
+    content: url(../resources/images/buttons/button_1_enable.png);
 }
 
 button.disable > img.button_1 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_disable.png);
+    content: url(../resources/images/buttons/button_1_disable.png);
 }
 
 button.standby > img.button_1 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_standby.png);
+    content: url(../resources/images/buttons/button_1_standby.png);
 }
 
 button.lock > img.button_1 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_lock.png) !important;
+    content: url(../resources/images/buttons/button_1_lock.png) !important;
 }
 
 button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_1 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_1_disable.png) !important;
+    content: url(../resources/images/buttons/button_1_disable.png) !important;
 }
 
 /* -------- button_2 -------- */
 
 button.enable > img.button_2 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_enable.png);
+    content: url(../resources/images/buttons/button_2_enable.png);
 }
 
 button.disable > img.button_2 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_disable.png);
+    content: url(../resources/images/buttons/button_2_disable.png);
 }
 
 button.standby > img.button_2 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_standby.png);
+    content: url(../resources/images/buttons/button_2_standby.png);
 }
 
 button.lock > img.button_2 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_lock.png) !important;
+    content: url(../resources/images/buttons/button_2_lock.png) !important;
 }
 
 button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_2 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_2_disable.png) !important;
+    content: url(../resources/images/buttons/button_2_disable.png) !important;
 }
 
 /* -------- button_3 -------- */
 
 button.enable > img.button_3 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_enable.png);
+    content: url(../resources/images/buttons/button_3_enable.png);
 }
 
 button.disable > img.button_3 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_disable.png);
+    content: url(../resources/images/buttons/button_3_disable.png);
 }
 
 button.standby > img.button_3 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_standby.png);
+    content: url(../resources/images/buttons/button_3_standby.png);
 }
 
 button.lock > img.button_3 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_lock.png) !important;
+    content: url(../resources/images/buttons/button_3_lock.png) !important;
 }
 
 button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_3 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_3_disable.png) !important;
+    content: url(../resources/images/buttons/button_3_disable.png) !important;
 }
 
 /* -------- button_4 -------- */
 
 button.enable > img.button_4 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_enable.png);
+    content: url(../resources/images/buttons/button_4_enable.png);
 }
 
 button.disable > img.button_4 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_disable.png);
+    content: url(../resources/images/buttons/button_4_disable.png);
 }
 
 button.standby > img.button_4 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_standby.png);
+    content: url(../resources/images/buttons/button_4_standby.png);
 }
 
 button.lock > img.button_4 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_lock.png) !important;
+    content: url(../resources/images/buttons/button_4_lock.png) !important;
 }
 
 button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_4 {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/buttons/button_4_disable.png) !important;
+    content: url(../resources/images/buttons/button_4_disable.png) !important;
 }
 
 
@@ -198,41 +198,41 @@ img.br_EW {
 /* ---- NS ---- */
 
 img.br_NS {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NS.png);
+    content: url(../resources/images/branches/br_NS.png);
 }
 
 img.br_NS.NS {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NS_NS.png);
+    content: url(../resources/images/branches/br_NS_NS.png);
 }
 
 /* ---- EW ---- */
 
 img.br_EW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_EW.png);
+    content: url(../resources/images/branches/br_EW.png);
 }
 
 img.br_EW.EW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_EW_EW.png);
+    content: url(../resources/images/branches/br_EW_EW.png);
 }
 
 /* ---- SE ---- */
 
 img.br_SE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SE.png);
+    content: url(../resources/images/branches/br_SE.png);
 }
 
 img.br_SE.SE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SE_SE.png);
+    content: url(../resources/images/branches/br_SE_SE.png);
 }
 
 /* ---- SW ---- */
 
 img.br_SW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SW.png);
+    content: url(../resources/images/branches/br_SW.png);
 }
 
 img.br_SW.SW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SW_SW.png);
+    content: url(../resources/images/branches/br_SW_SW.png);
 }
 
 /* -------- 3 Gates -------- */
@@ -240,67 +240,67 @@ img.br_SW.SW {
 /* ---- NSE ---- */
 
 img.br_NSE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE.png);
+    content: url(../resources/images/branches/br_NSE.png);
 }
 
 img.br_NSE.NS {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NS.png);
+    content: url(../resources/images/branches/br_NSE_NS.png);
 }
 
 img.br_NSE.NE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NE.png);
+    content: url(../resources/images/branches/br_NSE_NE.png);
 }
 
 img.br_NSE.SE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_SE.png);
+    content: url(../resources/images/branches/br_NSE_SE.png);
 }
 
 img.br_NSE.NSE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSE_NSE.png);
+    content: url(../resources/images/branches/br_NSE_NSE.png);
 }
 
 /* ---- NSW ---- */
 
 img.br_NSW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW.png);
+    content: url(../resources/images/branches/br_NSW.png);
 }
 
 img.br_NSW.NS {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NS.png);
+    content: url(../resources/images/branches/br_NSW_NS.png);
 }
 
 img.br_NSW.NW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NW.png);
+    content: url(../resources/images/branches/br_NSW_NW.png);
 }
 
 img.br_NSW.SW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_SW.png);
+    content: url(../resources/images/branches/br_NSW_SW.png);
 }
 
 img.br_NSW.NSW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSW_NSW.png);
+    content: url(../resources/images/branches/br_NSW_NSW.png);
 }
 
 /* ---- SEW ---- */
 
 img.br_SEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW.png);
+    content: url(../resources/images/branches/br_SEW.png);
 }
 
 img.br_SEW.SE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SE.png);
+    content: url(../resources/images/branches/br_SEW_SE.png);
 }
 
 img.br_SEW.SW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SW.png);
+    content: url(../resources/images/branches/br_SEW_SW.png);
 }
 
 img.br_SEW.EW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_EW.png);
+    content: url(../resources/images/branches/br_SEW_EW.png);
 }
 
 img.br_SEW.SEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_SEW_SEW.png);
+    content: url(../resources/images/branches/br_SEW_SEW.png);
 }
 
 /* -------- 4 Gates -------- */
@@ -308,51 +308,51 @@ img.br_SEW.SEW {
 /* ---- NSEW ---- */
 
 img.br_NSEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW.png);
+    content: url(../resources/images/branches/br_NSEW.png);
 }
 
 img.br_NSEW.NS {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NS.png);
+    content: url(../resources/images/branches/br_NSEW_NS.png);
 }
 
 img.br_NSEW.NE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NE.png);
+    content: url(../resources/images/branches/br_NSEW_NE.png);
 }
 
 img.br_NSEW.NW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NW.png);
+    content: url(../resources/images/branches/br_NSEW_NW.png);
 }
 
 img.br_NSEW.SE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SE.png);
+    content: url(../resources/images/branches/br_NSEW_SE.png);
 }
 
 img.br_NSEW.SW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SW.png);
+    content: url(../resources/images/branches/br_NSEW_SW.png);
 }
 
 img.br_NSEW.EW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_EW.png);
+    content: url(../resources/images/branches/br_NSEW_EW.png);
 }
 
 img.br_NSEW.NSE {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSE.png);
+    content: url(../resources/images/branches/br_NSEW_NSE.png);
 }
 
 img.br_NSEW.NSW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSW.png);
+    content: url(../resources/images/branches/br_NSEW_NSW.png);
 }
 
 img.br_NSEW.NEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NEW.png);
+    content: url(../resources/images/branches/br_NSEW_NEW.png);
 }
 
 img.br_NSEW.SEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_SEW.png);
+    content: url(../resources/images/branches/br_NSEW_SEW.png);
 }
 
 img.br_NSEW.NSEW {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/branches/br_NSEW_NSEW.png);
+    content: url(../resources/images/branches/br_NSEW_NSEW.png);
 }
 
 
@@ -367,31 +367,31 @@ img.archetype {
 /* -------- archetype -------- */
 
 img.archetype.blue {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-blue.png);
+    content: url(../resources/images/archetypes/icon-archetype-blue.png);
 }
 
 img.archetype.white {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-white.png);
+    content: url(../resources/images/archetypes/icon-archetype-white.png);
 }
 
 img.archetype.yellow {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-yellow.png);
+    content: url(../resources/images/archetypes/icon-archetype-yellow.png);
 }
 
 img.archetype.pink {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-pink.png);
+    content: url(../resources/images/archetypes/icon-archetype-pink.png);
 }
 
 img.archetype.green {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-green.png);
+    content: url(../resources/images/archetypes/icon-archetype-green.png);
 }
 
 img.archetype.gold {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-gold.png);
+    content: url(../resources/images/archetypes/icon-archetype-gold.png);
 }
 
 img.archetype.red {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/archetypes/icon-archetype-red.png);
+    content: url(../resources/images/archetypes/icon-archetype-red.png);
 }
 
 
@@ -402,15 +402,15 @@ img.misc {
 }
 
 img.misc.orb {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/icon-orb.png);
+    content: url(../resources/images/misc/icon-orb.png);
 }
 
 img.misc.arrow_up {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/icon-arrow-up.png);
+    content: url(../resources/images/misc/icon-arrow-up.png);
     padding-top: .2em;
 }
 
 img.misc.arrow_down {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/icon-arrow-down.png);
+    content: url(../resources/images/misc/icon-arrow-down.png);
     padding-bottom: .2em;
 }

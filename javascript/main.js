@@ -213,7 +213,7 @@ class SoundEffect extends Audio {
 
     /** @param {string} filename */
     constructor(filename) {
-        super("../resources/audios/" + filename);
+        super("./resources/audios/" + filename);
         this.controls = false;
         this.preload = true;
         this.preservesPitch = false;
@@ -705,6 +705,7 @@ class NODE extends UNIT{
             routelogs[RID].serial++;
 
             console.groupCollapsed(`${this.info} Route ${RID}.${SID} start. (task: "${packet.task}")`);
+            console.info(`Origin packet: ${packet.parse}`);
 
             response = super.transmit({
                 packet: packet,
@@ -751,6 +752,7 @@ class NODE extends UNIT{
                         const input = this.importNode.filter((node) => (node.classList.contains('enable')));
                         if (input) /* has other active node connecting */ {
                             const sibling = [this.proto.import, this.proto.export].every((arr) => arr?.includes(packet.router.name) ?? true);
+                            const children = this.exportNode.filter((node) => !this.proto.import?.includes(node.name));
                             const reachable = this.proto.import ? (
                                 logs_reachable ?? this.transmit({
                                     gateway: this.importGate.filter((gate) => gate.toward.some((node) => node.classList.contains('enable'))),
@@ -758,7 +760,7 @@ class NODE extends UNIT{
                                     packet: new Packet({
                                         task: 'reachable?',
                                         src: packet.src,
-                                        ignore: sibling ? [this, ...packet.ignore] : packet.ignore,
+                                        ignore: sibling ? [this, ...children, ...packet.ignore] : [...children, ...packet.ignore],
                                         RID: packet.RID
                                     })
                                 })
@@ -807,6 +809,7 @@ class NODE extends UNIT{
                         const input = this.importNode.filter((node) => (node.classList.contains('enable')));
                         if (input) /* has other active node connecting */ {
                             const sibling = [this.proto.import, this.proto.export].every((arr) => arr?.includes(packet.router.name) ?? true);
+                            const children = this.exportNode.filter((node) => !this.proto.import?.includes(node.name));
                             response = this.proto.import ? (
                                 logs_reachable ?? this.transmit({
                                     gateway: this.importGate.filter((gate) => gate.toward.some((node) => node.classList.contains('enable'))),
@@ -814,7 +817,7 @@ class NODE extends UNIT{
                                     packet: new Packet({
                                         task: 'reachable?',
                                         src: packet.src,
-                                        ignore: sibling ? [this, ...packet.ignore] : packet.ignore,
+                                        ignore: sibling ? [this, ...children, ...packet.ignore] : [...children, ...packet.ignore],
                                         RID: packet.RID
                                     })
                                 })

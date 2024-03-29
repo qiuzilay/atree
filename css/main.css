@@ -5,13 +5,13 @@ body {
 
 @font-face {
     font-family: 'wynn';
-    src: url(https://cdn.jsdelivr.net/gh/qiuzilay/Website-Code@main/atree%20v3/resources/fonts/wynn_delta_regular.ttf) format('truetype');
+    src: url(../resources/fonts/wynn_delta_regular.ttf) format('truetype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'wynn';
-    src: url(https://cdn.jsdelivr.net/gh/qiuzilay/Website-Code@main/atree%20v3/resources/fonts/wynn_alter_bold.ttf) format('truetype');
+    src: url(../resources/fonts/wynn_alter_bold.ttf) format('truetype');
     font-weight: 900;
 }
 
@@ -94,17 +94,17 @@ div#main .frame {
 }
 
 div#main .frame.head {
-    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-upper.png);
+    background-image: url(../resources/images/misc/main-background-upper.png);
 }
 
 div#main .frame.body {
-    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-body.png);
+    background-image: url(../resources/images/misc/main-background-body.png);
     background-size: 100%;
     background-repeat: repeat-y;
 }
 
 div#main .frame.foot {
-    background-image: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-lower.png);
+    background-image: url(../resources/images/misc/main-background-lower.png);
 }
 
 
@@ -117,15 +117,15 @@ div#main .frame > img {
 }
 
 div#main .frame.head > img {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-upper.png);
+    content: url(../resources/images/misc/main-background-upper.png);
 }
 
 div#main .frame.body > img {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-body.png);
+    content: url(../resources/images/misc/main-background-body.png);
 }
 
 div#main .frame.foot > img {
-    content: url(https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/images/misc/main-background-lower.png);
+    content: url(../resources/images/misc/main-background-lower.png);
 }
 
 /* ------- main.page.frame.container ------- */
