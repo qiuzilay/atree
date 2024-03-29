@@ -753,6 +753,14 @@ class NODE extends UNIT{
                         if (input) /* has other active node connecting */ {
                             const sibling = [this.proto.import, this.proto.export].every((arr) => arr?.includes(packet.router.name) ?? true);
                             const children = this.exportNode.filter((node) => !this.proto.import?.includes(node.name));
+                            const ignore = [...children, ...packet.ignore];
+                            
+                            if (input.length > 1) {
+                                ignore.push(packet.router);
+                            } else if (sibling) {
+                                ignore.push(this);
+                            }
+                            
                             const reachable = this.proto.import ? (
                                 logs_reachable ?? this.transmit({
                                     gateway: this.importGate.filter((gate) => gate.toward.some((node) => node.classList.contains('enable'))),
@@ -760,7 +768,7 @@ class NODE extends UNIT{
                                     packet: new Packet({
                                         task: 'reachable?',
                                         src: packet.src,
-                                        ignore: sibling ? [this, ...children, ...packet.ignore] : [...children, ...packet.ignore],
+                                        ignore: ignore,
                                         RID: packet.RID
                                     })
                                 })
@@ -810,6 +818,14 @@ class NODE extends UNIT{
                         if (input) /* has other active node connecting */ {
                             const sibling = [this.proto.import, this.proto.export].every((arr) => arr?.includes(packet.router.name) ?? true);
                             const children = this.exportNode.filter((node) => !this.proto.import?.includes(node.name));
+                            const ignore = [...children, ...packet.ignore];
+                            
+                            if (input.length > 1) {
+                                ignore.push(packet.router);
+                            } else if (sibling) {
+                                ignore.push(this);
+                            }
+                            
                             response = this.proto.import ? (
                                 logs_reachable ?? this.transmit({
                                     gateway: this.importGate.filter((gate) => gate.toward.some((node) => node.classList.contains('enable'))),
@@ -817,7 +833,7 @@ class NODE extends UNIT{
                                     packet: new Packet({
                                         task: 'reachable?',
                                         src: packet.src,
-                                        ignore: sibling ? [this, ...children, ...packet.ignore] : [...children, ...packet.ignore],
+                                        ignore: ignore,
                                         RID: packet.RID
                                     })
                                 })
