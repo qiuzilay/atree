@@ -133,6 +133,7 @@ class Action {
                         case elem instanceof NODE:
                             elem.parentElement = td;
                             td.addEventListener('click', EventHandler.nodeInteractEvent);
+                            td.addEventListener('mouseenter', EventHandler.nodeHoverEvent);
 
                         default:
                             td.appendChild(elem.html);
@@ -202,6 +203,23 @@ class EventHandler {
         // tab buttons
         for (const button of Object.values(EventHandler.tabs)) {
             button.textContent = translate[languages[using]][button.dataset.class];
+        }
+
+    }
+
+    /** @param {Event} event */
+    static nodeHoverEvent(event) {
+        /** @type {HTMLTableCellElement} */
+        const td = event.target;
+        /** @type {HTMLSpanElement} */
+        const tooltip = td.querySelector('span.tooltip');
+
+        const rect = tooltip.getBoundingClientRect();
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        if (rect.right > width) {
+            tooltip.classList.add('reverse');
+            td.removeEventListener('mouseenter', EventHandler.nodeHoverEvent);
         }
 
     }

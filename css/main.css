@@ -216,8 +216,8 @@ div#main td .tooltip {
     display: block;
     position: absolute;
     width: max-content;
-    max-width: 48vw;
-    min-width: 32vw;
+    max-width: 42vw;
+    min-width: calc(100% + 8em);
     padding: .6em 4em .6em .8em;
     left: 120%;
     right: initial;
@@ -232,7 +232,7 @@ div#main td .tooltip {
     font-weight: 700;
     font-size: 1.2em;
     text-shadow: 2px 2px #2A2A2A;
-    line-height: 1.5em;
+    line-height: 1.425em;
     word-spacing: -.15em;
     word-wrap: break-word;
     box-sizing: border-box;
@@ -254,8 +254,6 @@ div#main td:hover .tooltip {
 
 @media only screen and (max-width: 1024px) {
     div#main td .tooltip {
-        max-width: 45vw;
-        min-width: 30vw;
         font-size: medium;
         padding: .53em 3.55em .53em .71em;
     }
@@ -263,8 +261,6 @@ div#main td:hover .tooltip {
 
 @media only screen and (max-width: 768px) {
     div#main td .tooltip {
-        max-width: 30vw;
-        min-width: 20vw;
         font-size: small;
         padding: .48em 3.25em .48em .65em;
     }
