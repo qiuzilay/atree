@@ -1327,7 +1327,7 @@ class Tooltip {
             let text;
             try {
                 // throw new Error(`<${this.master.name}> Fetching was blocked!`);
-                text = await window.fetch(`https://raw.githubusercontent.com/qiuzilay/Website-Code/main/atree%20v3/resources/texts/${lang}/${node.class}/${node.name}.txt`)
+                text = await window.fetch(`https://raw.githubusercontent.com/qiuzilay/atree/gh-pages/resources/texts/${lang}/${node.class}/${node.name}.txt`)
                                             .catch((error) => console.error(error))
                                             .then(/** @param {Response} response */ (response) => response.ok ? response.text() : void(0));
             } catch (E) {
