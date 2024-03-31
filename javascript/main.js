@@ -259,8 +259,8 @@ class SoundEffect extends Audio {
         this.controls = false;
         this.preload = true;
         this.preservesPitch = false;
-        this.audio.mozPreservesPitch = false;
-        this.audio.webkitPreservesPitch = false;
+        this.mozPreservesPitch = false;
+        this.webkitPreservesPitch = false;
     }
 
     /**
