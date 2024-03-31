@@ -75,7 +75,6 @@ class Action {
 
     /** @param {Classes} clsname */
     static renderTree(clsname) {
-        const tree = routemap[clsname];
         const page = document.querySelector(`div#main div#${clsname}.page`);
 
         /* ------ render footer ------ */ {
@@ -100,6 +99,9 @@ class Action {
                         case '[0,4]': {
                             orb.parentElement = td;
                             td.appendChild(orb.html);
+                            td.addEventListener('click', EventHandler.orbInteractEvent);
+                            td.addEventListener('touchstart', EventHandler.orbTouchStartEvent);
+                            td.addEventListener('touchend', EventHandler.orbTouchEndEvent);
                             break;
                         }
                         case '[2,2]':
@@ -134,6 +136,7 @@ class Action {
                             elem.parentElement = td;
                             td.addEventListener('click', EventHandler.nodeInteractEvent);
                             td.addEventListener('mouseenter', EventHandler.nodeHoverEvent);
+                            td.addEventListener('mouseleave', EventHandler.nodeUnhoverEvent);
 
                         default:
                             td.appendChild(elem.html);
@@ -154,6 +157,7 @@ class Action {
 class EventHandler {
     /** @type {HTMLCollectionOf<HTMLButtonElement>}*/
     static tabs = document.getElementById('tab').getElementsByClassName('tab_button');
+    static time = {start: 0, end: 0, get elapse() {return this.end - this.start}};
 
     /** @param {Event} event*/
     static tabInteractEvent(event) {
@@ -177,6 +181,24 @@ class EventHandler {
         
         routemap[page][axis.y][axis.x].click();
 
+    }
+
+    /** @param {Event} event */
+    static orbInteractEvent(event) {
+        /** @type {HTMLTableCellElement} */
+        const td = event.target;
+    }
+
+    /** @param {Event} event */
+    static orbTouchStartEvent(event) {
+        event.preventDefault();
+        EventHandler.time.start = Date.now();
+    }
+
+    /** @param {Event} event */
+    static orbTouchEndEvent(event) {
+        EventHandler.time.end = Date.now();
+        if (EventHandler.time.elapse > 1000) alert('trigger!');
     }
 
     /** @param {Event} event*/
@@ -209,20 +231,22 @@ class EventHandler {
 
     /** @param {Event} event */
     static nodeHoverEvent(event) {
-        /** @type {HTMLTableCellElement} */
-        const td = event.target;
         /** @type {HTMLSpanElement} */
-        const tooltip = td.querySelector('span.tooltip');
-
+        const tooltip = event.target.querySelector('span.tooltip');
         const rect = tooltip.getBoundingClientRect();
         const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-        if (rect.right > width) {
-            tooltip.classList.add('reverse');
-            td.removeEventListener('mouseenter', EventHandler.nodeHoverEvent);
-        }
-
+        if (rect.right > width) tooltip.classList.add('reverse');
     }
+
+    /** @param {Event} event */
+    static nodeUnhoverEvent(event) {
+        /** @type {HTMLSpanElement} */
+        const tooltip = event.target.querySelector('span.tooltip');
+
+        tooltip.classList.remove('reverse');
+    }
+
 }
 
 /* -------------------------------- */
@@ -235,6 +259,8 @@ class SoundEffect extends Audio {
         this.controls = false;
         this.preload = true;
         this.preservesPitch = false;
+        this.audio.mozPreservesPitch = false;
+        this.audio.webkitPreservesPitch = false;
     }
 
     /**
@@ -619,6 +645,9 @@ class NODE extends UNIT{
         };
 
         switch (true) {
+            case this.classList.contains('enable'): {
+                return true;
+            }
             case this.classList.contains('disable'): {
                 return false;
             }
