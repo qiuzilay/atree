@@ -157,7 +157,9 @@ class Action {
 class EventHandler {
     /** @type {HTMLCollectionOf<HTMLButtonElement>}*/
     static tabs = document.getElementById('tab').getElementsByClassName('tab_button');
-    static time = {start: 0, end: 0, get elapse() {return this.end - this.start}};
+    // static time = {start: 0, end: 0, get elapse() {return this.end - this.start}};
+    static timeoutID = null;
+    static longpress = false;
 
     /** @param {Event} event*/
     static tabInteractEvent(event) {
@@ -185,20 +187,28 @@ class EventHandler {
 
     /** @param {Event} event */
     static orbInteractEvent(event) {
+        if (EventHandler.longpress) return;
+        
         /** @type {HTMLTableCellElement} */
         const td = event.target;
+
+        alert('click!');
+
     }
 
     /** @param {Event} event */
     static orbTouchStartEvent(event) {
         event.preventDefault();
-        EventHandler.time.start = Date.now();
+        EventHandler.longpress = false;
+        EventHandler.timeoutID = setTimeout(() => {
+            EventHandler.longpress = true;
+            alert('long press!');
+        }, 1000);
     }
 
     /** @param {Event} event */
     static orbTouchEndEvent(event) {
-        EventHandler.time.end = Date.now();
-        if (EventHandler.time.elapse > 1000) alert('trigger!');
+        clearTimeout(EventHandler.timeoutID);
     }
 
     /** @param {Event} event*/
