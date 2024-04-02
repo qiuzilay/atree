@@ -87,6 +87,7 @@ class Action {
                 const tr = document.createElement('tr');
                 for (let col = 0; col < 9; col++) {
                     const td = document.createElement('td');
+                    td.oncontextmenu = (event) => false;
                     switch (str([row, col])) {
                         case '[0,3]': {
                             td.appendChild(generateElement(`<img class="misc arrow_up">`));
@@ -130,6 +131,7 @@ class Action {
                 const tr = document.createElement('tr');
                 for (const elem of row) {
                     const td = document.createElement('td');
+                    td.oncontextmenu = (event) => false;
                     if (elem instanceof UNIT) switch (true) {
 
                         case elem instanceof NODE:
@@ -152,6 +154,17 @@ class Action {
 
         return this;
     }
+
+    /** @param {Classes} clsname */
+    static resetTree(clsname) {
+        console.warn(`reset ${clsname}!`);
+    }
+
+    /** @param {Classes} clsname */
+    static encodeTree(clsname) {
+        console.warn(`encode ${clsname}!`);
+    }
+
 }
 
 class EventHandler {
@@ -159,7 +172,6 @@ class EventHandler {
     static tabs = document.getElementById('tab').getElementsByClassName('tab_button');
     // static time = {start: 0, end: 0, get elapse() {return this.end - this.start}};
     static timeoutID = null;
-    static longpress = false;
 
     /** @param {Event} event*/
     static tabInteractEvent(event) {
@@ -187,28 +199,30 @@ class EventHandler {
 
     /** @param {Event} event */
     static orbInteractEvent(event) {
-        if (EventHandler.longpress) return;
-        
-        /** @type {HTMLTableCellElement} */
-        const td = event.target;
-
-        alert('click!');
-
+        const /** @type {Orb} */ orb = routedata[page].cost;
+        if (orb.confirming || event.shiftKey) EventHandler.resetTreeEvent(event);
+        else Action.encodeTree(page);
     }
 
     /** @param {Event} event */
     static orbTouchStartEvent(event) {
-        event.preventDefault();
-        EventHandler.longpress = false;
-        EventHandler.timeoutID = setTimeout(() => {
-            EventHandler.longpress = true;
-            alert('long press!');
-        }, 1000);
+        EventHandler.timeoutID = setTimeout(EventHandler.resetTreeEvent, 1000, event);
     }
 
     /** @param {Event} event */
     static orbTouchEndEvent(event) {
         clearTimeout(EventHandler.timeoutID);
+    }
+
+    /** @param {Event} event */
+    static resetTreeEvent(event) {
+        const /** @type {HTMLTableCellElement} */ td = event.target;
+        const /** @type {Orb} */ orb = routedata[page].cost;
+
+        if (!orb.confirming) return orb.confirm();
+
+        orb.restore();
+        Action.resetTree(page);
     }
 
     /** @param {Event} event*/
@@ -1166,6 +1180,18 @@ class Orb extends Array {
     #info;
     #value;
     #_value;
+    #timeoutID;
+    static #confirm_tooltip = document.createElement('span');
+    static #confirm_text = document.createElement('span');
+    static #confirm_image = document.createElement('img');
+    static {
+        this.#confirm_tooltip.appendChild(this.#confirm_text);
+        this.#confirm_tooltip.className = 'tooltip'
+        this.#confirm_image.className = 'misc confirm';
+        this.#confirm_text.className = 'color-red style-larger';
+        this.#confirm_text.style.display = 'block';
+        this.#confirm_text.style.lineHeight = '1.4em';
+    }
 
     /** @param {Classes} clsname*/
     constructor(clsname) {
@@ -1175,6 +1201,7 @@ class Orb extends Array {
         this.class = clsname;
         /** @type {HTMLTableCellElement} */
         this.parentElement = undefined;
+        this.confirming = false;
         this.#_value = 45;
 
         this.#image = document.createElement('img');
@@ -1215,12 +1242,10 @@ class Orb extends Array {
         this.#tooltip.appendChild(this.#info);
     }
 
-    /** @return {number} */
     get value() {
         return this.#_value;
     }
 
-    /** @param {number} _val Integer only */
     set value(_val) {
         const incre = this.#_value < _val;
         this.#value.textContent = this.#_value = _val;
@@ -1249,6 +1274,22 @@ class Orb extends Array {
         fragment.appendChild(this.#tooltip);
 
         return fragment;
+    }
+
+    confirm() {
+        this.confirming = true;
+        this.#timeoutID = setTimeout(() => {
+            this.restore();
+        }, 3000);
+        Orb.#confirm_text.textContent = translate[languages[using]].reset_confirm;
+        this.parentElement.replaceChildren(Orb.#confirm_image, Orb.#confirm_tooltip);
+    }
+
+    restore() {
+        this.confirming = false;
+        this.#image.classList.remove('confirm');
+        clearTimeout(this.#timeoutID);
+        this.parentElement.replaceChildren(this.html);
     }
 }
 
@@ -1593,6 +1634,8 @@ class Tree extends Array {
         return this[row][col];
     }
 
+    encode() {}
+
     static newline(column, delcount, value) {
         const line = new Array(9).fill(null);
         if ([column, delcount, value].every((arg) => arg !== undefined)) line.splice(column, delcount, value);
@@ -1634,6 +1677,7 @@ const translate = {
         apoint_rmain: "剩餘點數\uFF1A",
         apoint_info1: "\uFF08左鍵點擊複製分享連結\uFF09",
         apoint_info2: "\uFF08Shift+左鍵重置技能樹\uFF09",
+        reset_confirm: "重置技能樹？",
         archer: "弓箭手",
         warrior: "戰士",
         mage: "法師",
@@ -1651,6 +1695,7 @@ const translate = {
         apoint_rmain: "Available Points: ",
         apoint_info1: "(Left-Click to copy URL to clipboard)",
         apoint_info2: "(Shift + Left-Click to reset Ability Tree)",
+        reset_confirm: "Reset the entire Ability Tree?",
         archer: "Archer",
         warrior: "Warrior",
         mage: "Mage",

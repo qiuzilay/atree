@@ -405,6 +405,10 @@ img.misc.orb {
     content: url(../resources/images/misc/icon-orb.png);
 }
 
+img.misc.confirm {
+    content: url(../resources/images/misc/icon-checkmark-red.png);
+}
+
 img.misc.arrow_up {
     content: url(../resources/images/misc/icon-arrow-up.png);
     padding-top: .2em;
