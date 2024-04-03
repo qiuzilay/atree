@@ -170,7 +170,6 @@ class Action {
 class EventHandler {
     /** @type {HTMLCollectionOf<HTMLButtonElement>}*/
     static tabs = document.getElementById('tab').getElementsByClassName('tab_button');
-    // static time = {start: 0, end: 0, get elapse() {return this.end - this.start}};
     static timeoutID = null;
 
     /** @param {Event} event*/
