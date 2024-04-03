@@ -240,7 +240,8 @@ class EventHandler {
 
         // archetypes & orbs
         for (const clsdata of Object.values(routedata)) {
-            clsdata.cost.parentElement?.replaceChildren(clsdata.cost.html);
+            // clsdata.cost.parentElement?.replaceChildren(clsdata.cost.html);
+            clsdata.cost.refresh();
             for (const atype of Object.values(clsdata.archetype)) {
                 atype.parentElement?.replaceChildren(atype.html);
             }
@@ -1177,6 +1178,7 @@ class Orb extends Array {
     #descr;
     #suffix;
     #rmain;
+    #rmain_text;
     #info;
     #value;
     #_value;
@@ -1230,6 +1232,8 @@ class Orb extends Array {
         this.#rmain.className = 'color-aqua';
         this.#rmain.style.display = 'block';
         this.#rmain.style.marginTop = '1em';
+
+        this.#rmain_text = document.createTextNode('');
         
         this.#info = document.createElement('span');
         this.#info.className = 'color-dark_gray';
@@ -1261,19 +1265,25 @@ class Orb extends Array {
     }
 
     get html() {
-        const lang = translate[languages[using]];
         const fragment = document.createDocumentFragment();
 
-        this.#header.textContent = lang.apoint;
-        this.#descr.textContent = lang.apoint_descr;
+        this.refresh();
         this.#suffix.replaceChildren(this.#value, '/45');
-        this.#rmain.replaceChildren(`\u2726 ${lang.apoint_rmain}`, this.#suffix);
-        this.#info.textContent = [lang.apoint_info1, lang.apoint_info2].join('\n');
+        this.#rmain.replaceChildren(this.#rmain_text, this.#suffix);
         
         fragment.appendChild(this.#image);
         fragment.appendChild(this.#tooltip);
 
         return fragment;
+    }
+
+    refresh() {
+        const lang = translate[languages[using]];
+        this.#header.textContent = lang.apoint;
+        this.#descr.textContent = lang.apoint_descr;
+        this.#rmain_text.textContent = `\u2726 ${lang.apoint_rmain}`;
+        this.#info.textContent = [lang.apoint_info1, lang.apoint_info2].join('\n');
+        Orb.#confirm_text.textContent = lang.reset_confirm;
     }
 
     confirm() {
