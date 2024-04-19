@@ -7,7 +7,7 @@ let using = 0;
 /**
  * @typedef {('en' | 'zh-TW')}              Languages
  * @typedef  {("N" | "S" | "E" | "W")}      Direction
- * @typedef  {(NODE | WIRE)}              Units
+ * @typedef  {(NODE | PIPE)}              Units
  * @typedef  {('enable' | 'disable' | 'standby' | 'lock')}  States
  * @typedef  {('archer' | 'warrior' | 'mage' | 'assassin' | 'shaman')}  Classes
  * @typedef  {('Boltslinger' | 'Sharpshooter' | 'Trapper' | 'Fallen' | 'Battle Monk' | 'Paladin' | 'Riftwalker' | 'Light Bender' | 'Arcanist' | 'Shadestepper' | 'Trickster' | 'Acrobat' | 'Summoner' | 'Ritualist' | 'Acolyte')}   Archetypes
@@ -66,9 +66,7 @@ class Action {
             console.groupEnd();
         }
 
-        for (let y = tree.length; tree.length % 6; y++) {
-            tree[y] = Tree.newline();
-        }
+        for (let y = tree.length; tree.length % 6; y++) tree[y] = Tree.newline();
 
         return this; 
     }
@@ -131,7 +129,7 @@ class Action {
                 const tr = document.createElement('tr');
                 for (const elem of row) {
                     const td = document.createElement('td');
-                    td.oncontextmenu = (event) => false;
+                    // td.oncontextmenu = (event) => false;
                     if (elem instanceof UNIT) switch (true) {
 
                         case elem instanceof NODE:
@@ -162,13 +160,24 @@ class Action {
 
     /** @param {Classes} clsname */
     static encodeTree(clsname) {
-        console.warn(`encode ${clsname}!`);
+        const tree = routemap[clsname];
+        const url = new URL(window.location.origin);
+        url.search = new URLSearchParams({
+            lang: languages[using],
+            class: clsname,
+            version: '1.0.0'
+        });
+        url.hash = tree.encode();
+        console.info(window.location);
+        console.info(url);
+        console.info(`URL: ${url.toString()}`);
+        navigator.clipboard.writeText(url);
+
     }
 
 }
 
 class EventHandler {
-    /** @type {HTMLCollectionOf<HTMLButtonElement>}*/
     static tabs = document.getElementById('tab').getElementsByClassName('tab_button');
     static timeoutID = null;
 
@@ -272,6 +281,8 @@ class EventHandler {
     }
 
 }
+
+class Base64 {}
 
 /* -------------------------------- */
 
@@ -414,6 +425,7 @@ class Gate {
 class UNIT {
 
     constructor(axis) {
+        /** @type {[number, number]} */
         this.axis = axis;
         this.gates = {
             N: new Gate('N'),
@@ -474,7 +486,7 @@ class UNIT {
 
             const signal = gate.connect.transmit({
                 packet: subpack,
-                suspend: suspend // 給 WIRE 看的
+                suspend: suspend // 給 PIPE 看的
             })
 
             response ||= signal;
@@ -582,8 +594,8 @@ class NODE extends UNIT{
                     default: throw Error(`invalid direction "${dir}" detected in the draft of <${this.name}> under ${this.class}.`);
                 }
 
-                /** @type {WIRE} */
-                const branch = (tree.read(y, x) instanceof WIRE) ? tree[y][x] : new WIRE([x, y]);
+                /** @type {PIPE} */
+                const branch = (tree.read(y, x) instanceof PIPE) ? tree[y][x] : new PIPE([x, y]);
 
                 branch.bind(Gate.opposite(dir), this, obj);
 
@@ -940,7 +952,7 @@ class NODE extends UNIT{
 
 }
 
-class WIRE extends UNIT {
+class PIPE extends UNIT {
     #upperImg;
     #lowerImg;
 
@@ -959,7 +971,7 @@ class WIRE extends UNIT {
         return fragment;
     }
 
-    get info() {return `Wire [${this.axis}]`}
+    get info() {return `Pipe [${this.axis}]`}
 
     /**
      * @param {Direction} pos 
@@ -1004,10 +1016,10 @@ class WIRE extends UNIT {
     }
 
     /**
-     * @typedef {Object} WIRE_transmitParams
+     * @typedef {Object} PIPE_transmitParams
      * @property {Packet}   packet      original packet
      * @property {boolean}  suspend     stop transmit chain if met criteria in any response (optional, default `false`)
-     * @param   {WIRE_transmitParams}
+     * @param   {PIPE_transmitParams}
      * @return  {boolean?}
      **/
     transmit({packet, suspend=false}) {
@@ -1643,7 +1655,18 @@ class Tree extends Array {
         return this[row][col];
     }
 
-    encode() {}
+    encode() {
+        const dtoh = /** @param {number} num */ (num) => num.toString(16).padStart(2, 0);
+        const logs = [];
+        for (const row of this) {
+            for (const elem of row) {
+                if ((elem instanceof NODE) && (elem.classList.contains('enable'))) {
+                    logs.push(Array.from(elem.axis, dtoh).join(''));
+                }
+            }
+        }
+        return logs.join('');
+    }
 
     static newline(column, delcount, value) {
         const line = new Array(9).fill(null);
