@@ -101,11 +101,17 @@
                 <option value=1>English</option>
             </select>
         </div>
+        <script src="./javascript/constants.js"></script>
+        <script src="./javascript/atree.js"></script>
+        <script src="./javascript/dict.js"></script>
+        <script src="./javascript/misc.js"></script>
+        <script src="./javascript/route.js"></script>
         <script src="./javascript/main.js"></script>
         <script>
-            'use strict';
+            "use strict";
             var page;
-            const buttons = document.getElementById('tab').getElementsByClassName('tab_button');
+            /** @type {HTMLCollectionOf<Element>} in 'constants.js' */
+            const buttons = TABELEMENTS;
             const pages = document.getElementById('main').getElementsByClassName('page');
             function turnPage(event, clsname) {
                 page = clsname;

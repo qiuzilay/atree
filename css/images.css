@@ -23,7 +23,7 @@ img.button_shaman,
 img.button_2,
 img.button_3,
 img.button_4,
-button.lock > img {
+button.locked > img {
     transform: scale(1.15);
 }
 
@@ -111,11 +111,11 @@ button.standby > img.button_1 {
     content: url(../resources/images/buttons/button_1_standby.png);
 }
 
-button.lock > img.button_1 {
+button.locked > img.button_1 {
     content: url(../resources/images/buttons/button_1_lock.png) !important;
 }
 
-button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_1 {
+button.standby:not(.locked):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_1 {
     content: url(../resources/images/buttons/button_1_disable.png) !important;
 }
 
@@ -133,11 +133,11 @@ button.standby > img.button_2 {
     content: url(../resources/images/buttons/button_2_standby.png);
 }
 
-button.lock > img.button_2 {
+button.locked > img.button_2 {
     content: url(../resources/images/buttons/button_2_lock.png) !important;
 }
 
-button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_2 {
+button.standby:not(.locked):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_2 {
     content: url(../resources/images/buttons/button_2_disable.png) !important;
 }
 
@@ -155,11 +155,11 @@ button.standby > img.button_3 {
     content: url(../resources/images/buttons/button_3_standby.png);
 }
 
-button.lock > img.button_3 {
+button.locked > img.button_3 {
     content: url(../resources/images/buttons/button_3_lock.png) !important;
 }
 
-button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_3 {
+button.standby:not(.locked):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_3 {
     content: url(../resources/images/buttons/button_3_disable.png) !important;
 }
 
@@ -177,11 +177,11 @@ button.standby > img.button_4 {
     content: url(../resources/images/buttons/button_4_standby.png);
 }
 
-button.lock > img.button_4 {
+button.locked > img.button_4 {
     content: url(../resources/images/buttons/button_4_lock.png) !important;
 }
 
-button.standby:not(.lock):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_4 {
+button.standby:not(.locked):has(+ .tooltip .symbol-deny[data-update="cost"]) > img.button_4 {
     content: url(../resources/images/buttons/button_4_disable.png) !important;
 }
 
