@@ -65,7 +65,7 @@ class Archetype extends Set {
         this.#_value = 0;
         this.#tooltip = document.createElement('span');
         this.#body = languages.reduce((object, lang) => ({...object, [lang]: document.createElement('span')}), {});
-        this.#image = document.createElement('img');
+        this.#image = document.createElement('span');
         switch (this.name) {
             case 'Boltslinger':
             case 'Battle Monk':
@@ -98,8 +98,7 @@ class Archetype extends Set {
                 break;
         }
         this.#tooltip.classList.add('tooltip');
-        this.#image.classList.add('archetype');
-        this.#image.classList.add(this.color);
+        this.#image.classList.add(`archetype-${this.color}`);
         this.#__head__();
         this.#__body__();
         this.#__foot__();
@@ -193,11 +192,11 @@ class Orb extends Array {
     #timeoutID;
     static #confirm_tooltip = document.createElement('span');
     static #confirm_text = document.createElement('span');
-    static #confirm_image = document.createElement('img');
+    static #confirm_image = document.createElement('span');
     static {
         this.#confirm_tooltip.appendChild(this.#confirm_text);
         this.#confirm_tooltip.className = 'tooltip'
-        this.#confirm_image.className = 'misc confirm';
+        this.#confirm_image.className = 'misc-confirm';
         this.#confirm_text.className = 'color-red style-larger';
         this.#confirm_text.style.display = 'block';
         this.#confirm_text.style.lineHeight = '1.4em';
@@ -214,8 +213,8 @@ class Orb extends Array {
         this.confirming = false;
         this.#_value = 45;
 
-        this.#image = document.createElement('img');
-        this.#image.className = 'misc orb';
+        this.#image = document.createElement('span');
+        this.#image.className = 'misc-orb';
         
         this.#tooltip = document.createElement('span');
         this.#tooltip.className = 'tooltip';

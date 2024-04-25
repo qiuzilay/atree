@@ -204,7 +204,7 @@ class NODE extends UNIT {
      * @property    {String[]?}             import
      * @property    {String[]?}             export
      * @property    {String[]?}             block
-     * @property    {String}                demand
+     * @property    {String}                required
      * @property    {Number}                cost
      * @property    {Object}                archetype
      * @property    {ARCHETYPES}                archetype.name
@@ -243,7 +243,7 @@ class NODE extends UNIT {
 
         // Set "standby" if is the first node else "disable"
         this.classList.add(((axis.row === 1) && (axis.col === 4)) ? STANDBY : DISABLE);
-        this.buttonElement.appendChild(generateElement(`<img class="${info.display.icon}">`));
+        this.classList.add(info.display.icon);
         
         this.#buildpath();
     }
@@ -392,7 +392,7 @@ class NODE extends UNIT {
                 console.warn(`<${this.name}> This ability was locked by ${chain(locker)}!`);
                 return false;
             }
-            case this.tooltip.demand?.classList.contains('symbol-deny'): {
+            case this.tooltip.required?.classList.contains('symbol-deny'): {
                 console.warn(`<${this.name}> this ability is dependent on <${this.proto.rely}> !`)
                 return false;
             }
@@ -424,8 +424,8 @@ class NODE extends UNIT {
                 if (self.archetype?.name) dataset.archetype[self.archetype.name].value += 1;
                 
                 // update tooltip footer "Required Ability" status of all Nodes which rely on this node
-                dataset.demand[self.name]?.forEach(/** @param {NODE} node*/(node) => {
-                    node.tooltip.demand.className = 'symbol-checkmark';
+                dataset.required[self.name]?.forEach(/** @param {NODE} node*/(node) => {
+                    node.tooltip.required.className = 'symbol-checkmark';
                 });
 
                 // add html 'locked' class to state of all Nodes which is locked by this node
@@ -444,8 +444,8 @@ class NODE extends UNIT {
                 if (self.archetype?.name) dataset.archetype[self.archetype.name].value -= 1;
                 
                 // update tooltip footer "Required Ability" status of all Nodes which rely on this node
-                dataset.demand[self.name]?.forEach(/** @param {NODE} node*/(node) => {
-                    node.tooltip.demand.className = 'symbol-deny';
+                dataset.required[self.name]?.forEach(/** @param {NODE} node*/(node) => {
+                    node.tooltip.required.className = 'symbol-deny';
                 });
 
                 // remove html 'locked' class to state of all Nodes which is locked by this node
@@ -658,8 +658,8 @@ class PIPE extends UNIT {
     /** @param {axis} axis */
     constructor(axis) {
         super(axis);
-        this.#upperImg = document.createElement('img');
-        this.#lowerImg = document.createElement('img');
+        this.#upperImg = document.createElement('span');
+        this.#lowerImg = document.createElement('span');
         this.#upperImg.style.zIndex = 1;
         this.#lowerImg.style.zIndex = 0;
     }

@@ -90,11 +90,11 @@ class Action {
                     td.oncontextmenu = (event) => false;
                     switch (str([row, col])) {
                         case '[0,3]': {
-                            td.appendChild(generateElement(`<img class="misc arrow_up">`));
+                            td.appendChild(generateElement(`<span class="misc-arrow_up"></span>`));
                             break;
                         }
                         case '[0,5]': {
-                            td.appendChild(generateElement(`<img class="misc arrow_down">`));
+                            td.appendChild(generateElement(`<span class="misc-arrow_down"></span>`));
                             break;
                         }
                         case '[0,4]': {

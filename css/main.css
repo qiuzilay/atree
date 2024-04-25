@@ -120,10 +120,6 @@ div#main .frame.head > img {
     content: url(../resources/images/misc/main-background-upper.png);
 }
 
-div#main .frame.body > img {
-    content: url(../resources/images/misc/main-background-body.png);
-}
-
 div#main .frame.foot > img {
     content: url(../resources/images/misc/main-background-lower.png);
 }
@@ -168,7 +164,7 @@ div#main .container td {
 }
 
 div#main .frame.body .container td:has(button):hover::before,
-div#main .frame.foot .container td:has(img):hover::before {
+div#main .frame.foot .container td:has(span):hover::before {
     content: "";
     display: block;
     position: absolute;
@@ -186,28 +182,7 @@ div#main .container td::after {
 }
 
 div#main .container button {
-    display: block;
-    position: absolute;
-    border: none;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
     z-index: 98;
-    left: 0;
-    top: 0;
-}
-
-div#main .container button > img {
-    image-rendering: inherit;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
 }
 
 /* ------- tooltip ------- */

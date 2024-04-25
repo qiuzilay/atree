@@ -211,7 +211,7 @@ span.style-wrapper {
 
 /* -------- symbols -------- */
 
-span[class^='symbol-']::before {
+span[class^="symbol-"]::before {
     display: inline-block !important;
     text-align: center;
     width: 1.25em;
