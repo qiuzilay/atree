@@ -103,6 +103,8 @@ class Action {
                             td.addEventListener('click', EventHandler.orbInteractEvent);
                             td.addEventListener('touchstart', EventHandler.orbTouchStartEvent);
                             td.addEventListener('touchend', EventHandler.orbTouchEndEvent);
+                            td.addEventListener('mouseenter', EventHandler.nodeHoverEvent);
+                            td.addEventListener('mouseleave', EventHandler.nodeUnhoverEvent);
                             break;
                         }
                         case '[2,2]':
@@ -111,6 +113,8 @@ class Action {
                             const atype = atypes.shift();
                             atype.parentElement = td;
                             td.appendChild(atype.html);
+                            td.addEventListener('mouseenter', EventHandler.nodeHoverEvent);
+                            td.addEventListener('mouseleave', EventHandler.nodeUnhoverEvent);
                             break;
                         }
                     }
@@ -268,17 +272,23 @@ class EventHandler {
     static nodeHoverEvent(event) {
         /** @type {HTMLSpanElement} */
         const tooltip = event.target.querySelector('span.tooltip');
-        const rect = tooltip.getBoundingClientRect();
-        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        if (rect.right > width) tooltip.classList.add('reverse');
+        if (tooltip) {
+            const rect = tooltip.getBoundingClientRect();
+            const width = document.documentElement.clientWidth || window.innerWidth || document.body.clientWidth;
+            /* console.info(
+                `window.innerWidth: ${window.innerWidth}\n` +
+                `documentElement.clientWidth: ${document.documentElement.clientWidth}\n` +
+                `body.clientWidth: ${document.body.clientWidth}`,
+                rect
+            ); */
+            if (rect.right > width) tooltip.classList.add('reverse');
+        }
     }
 
     /** @param {Event} event */
     static nodeUnhoverEvent(event) {
         /** @type {HTMLSpanElement} */
         const tooltip = event.target.querySelector('span.tooltip');
-
         tooltip.classList.remove('reverse');
     }
 

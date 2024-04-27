@@ -1,4 +1,4 @@
-body {
+:root {
     overflow-x: hidden;
     -webkit-touch-callout: none !important;
 }
@@ -188,7 +188,7 @@ div#main .container button {
 /* ------- tooltip ------- */
 
 div#main td .tooltip {
-    display: block;
+    display: none;
     position: absolute;
     width: max-content;
     max-width: 42vw;
@@ -214,7 +214,6 @@ div#main td .tooltip {
     white-space: pre-line;
     z-index: -1;
     overflow: visible;
-    visibility: hidden;
 }
 
 div#main td .tooltip.reverse {
@@ -223,8 +222,8 @@ div#main td .tooltip.reverse {
 }
 
 div#main td:hover .tooltip {
+    display: block;
     z-index: 100;
-    visibility: visible;
 }
 
 @media only screen and (max-width: 1024px) {
